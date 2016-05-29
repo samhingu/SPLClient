@@ -1,0 +1,16 @@
+{
+  "name": "SPLClient",
+  "scripts": {
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
