@@ -21,6 +21,7 @@
       "declaration": false,
       "noImplicitAny": true,
       "noImplicitUseStrict": false,
+      "noEmitOnError":true,
       "removeComments": true,
       "noLib": false,
       "preserveConstEnums": true,
@@ -29,9 +30,9 @@
       "outDir" : "./dist/"
   },
   "exclude": [
-      "node_modules",
-      "typings/browser",
-      "typings/browser.d.ts"
+    "dist",
+    "typings",
+      "node_modules"
   ],
   "compileOnSave": true,
   "buildOnSave": false,
