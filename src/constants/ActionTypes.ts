@@ -1,0 +1,6 @@
+export const GET_LINK_REQUEST = 'GET_LINK_REQUEST'
+export const GET_LINK_SUCCESS = 'GET_LINK_SUCCESS'
+export const GET_LINK_ERROR = 'GET_LINK_ERROR'
+
+export const ADD_LINK = 'ADD_LINK'
+export const DELETE_LINK = 'DELETE_LINK'
