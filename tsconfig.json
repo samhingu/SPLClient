@@ -10,8 +10,10 @@
     "./src/store/index.ts",
     "./src/actions/Link.ts",
     "./src/reducers/Link.ts",
-    "./src/components/app.tsx",
-    "./src/index.tsx"
+    "./src/components/App.tsx",
+    "./src/index.tsx",
+    "./src/components/About.tsx",
+    "./src/containers/Links.tsx"
   ],
   "dependencies": {},
   "globalDependencies": {

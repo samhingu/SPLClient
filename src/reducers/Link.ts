@@ -23,7 +23,7 @@ const initialState: IState = [<Link>{
 export default (state: IState = initialState, action) => {
     switch (action.type) {
         case ADD_LINK:
-            return state;
+            return [...state, action.payload];
         default:
             return state;
 

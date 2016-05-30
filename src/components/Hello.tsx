@@ -1,13 +1,7 @@
 import * as React from "react";
 
-interface HelloProps {
-    compiler: string;
-    framework: string;
-}
-
-//export class Hello extends React.Component
-export default class Hello extends React.Component<HelloProps, {}>{
+export default class Hello extends React.Component<{}, {}>{
     render() {
-        return <h1>Hello from {this.props.compiler} and {this.props.framework}</h1>
+        return <h1>Hello from </h1>
     }
 }
