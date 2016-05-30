@@ -48,7 +48,7 @@ function getPlugins(){
 function getLoaders(){
   var loaders = [];
 
-  loaders.push({test : /\.tsx?$/, loader : 'ts-loader'});
+  loaders.push({test : /\.ts[x]?$/, loader : 'ts-loader'});
 
   return loaders;
 }
@@ -61,7 +61,7 @@ module.exports = {
   },
   devtool: 'source-map',
   resolve : {
-    extensions : ["", ".js", ".tsx"]
+    extensions : ["", ".js", ".tsx", ".ts"]
   },
   module : {
     loaders : getLoaders(),
