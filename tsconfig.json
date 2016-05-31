@@ -13,7 +13,8 @@
     "./src/components/App.tsx",
     "./src/index.tsx",
     "./src/components/About.tsx",
-    "./src/containers/Links.tsx"
+    "./src/containers/Links.tsx",
+    "./src/actions/fetch.ts"
   ],
   "dependencies": {},
   "globalDependencies": {

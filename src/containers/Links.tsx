@@ -10,7 +10,19 @@ interface Props extends React.Props<Links> {
     createLink: (link: Link) => void;
 }
 
-class Links extends React.Component<Props, {}>{
+const mapStateToProps = (state) => {
+    return {
+        links: state.links
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createLink: (link) => { return dispatch(LinkActions.createLink(link)) }
+    }
+}
+
+@connect(mapStateToProps, mapDispatchToProps)
+export default class Links extends React.Component<Props, {}>{
     public componentWillMount() {
         // load links
     }
@@ -29,19 +41,3 @@ class Links extends React.Component<Props, {}>{
         )
     }
 }
-
-const mapStateToProps = (state) => {
-    return {
-        links: state.links
-    }
-}
-const mapDispatchToProps = (dispatch) => {
-    return {
-        createLink: (link) => { return dispatch(LinkActions.createLink(link)) }
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Links)
