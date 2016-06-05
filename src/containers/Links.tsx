@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 import * as LinkActions from "../actions/Link";
-import { Link } from "../models/Link";
+import { Link, IState2 } from "../models/Link";
 
 interface Props extends React.Props<Links> {
-    links: Link[],
+    links: IState2,
     createLink: (link: Link) => void;
 }
 
@@ -17,7 +17,7 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        createLink: (link) => { return dispatch(LinkActions.createLink(link)) }
+        createLink: (link) => { return dispatch(LinkActions.getLinks()) }
     }
 }
 
@@ -32,8 +32,11 @@ export default class Links extends React.Component<Props, {}>{
 
         return (
             <div>
-                <div>HAVING LINKS TOTAL : {this.props.links.length}</div>
-                { this.props.links.map((link) =>
+                <div> LOADING : {this.props.links.isLoading.toString() }</div>
+                <div> errorMessage : {this.props.links.errorMessage}</div>
+                <div></div>
+                <div>HAVING LINKS TOTAL : {this.props.links.links.length}</div>
+                { this.props.links.links.map((link) =>
                     <li key={link._id}>{link.title}</li>
                 ) }
                 <button onClick={e => this.props.createLink({ _id: '0', title: 'New Link', body: 'body one', createdOn: 'on created this time' }) } >Add</button>

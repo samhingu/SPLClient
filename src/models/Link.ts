@@ -6,3 +6,9 @@ export type Link = {
 }
 
 export type IState = Link[]
+
+export type IState2 = {
+    links: IState,
+    isLoading: boolean,
+    errorMessage: string
+}

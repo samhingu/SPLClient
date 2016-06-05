@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 const cleanPlugin = require('clean-webpack-plugin');
 const htmlPlugin = require('html-webpack-plugin');
-
+const copyWebpackPlugin = require('copy-webpack-plugin');
 const isProduction = (process.env.NODE_ENV === 'production');
 const PATHS = {
   app : path.join(__dirname, '../src'),
@@ -30,16 +30,17 @@ function getPlugins(){
   plugins.push(new extractTextPlugin('[name].[contenthash].css',{
     allChunks: true
   }));
+  plugins.push( new copyWebpackPlugin([{ from: 'images/icons', to : "icons" }]));
   if(isProduction){
-    plugins.push(new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        drop_console: true,
-        warnings: false
-      },
-      output: {
-        comments: false
-      }
-    }));
+    // plugins.push(new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     drop_console: true,
+    //     warnings: false
+    //   },
+    //   output: {
+    //     comments: false
+    //   }
+    // }));
   }
 
   return plugins;
@@ -49,7 +50,11 @@ function getLoaders(){
   var loaders = [];
 
   loaders.push({test : /\.ts[x]?$/, loader : 'ts-loader'});
-
+  // loaders.push({
+  //    test: /\.(jpg|jpeg|gif|png|ico)$/,
+  //    exclude: /node_modules/,
+  //    loader:'file-loader?name=img/[path][name].[ext]&context=./app/images'
+  // });
   return loaders;
 }
 
