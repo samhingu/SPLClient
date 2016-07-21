@@ -1,4 +1,10 @@
 
+
+
+import "../bower_components/jquery/dist/jquery"
+//import "../bower_components/semantic/dist/semantic.css";
+import "../bower_components/semantic/src/semantic.less";
+//import "semantic"
 import * as React from "react"
 import { render } from "react-dom"
 import { Router, Route, IndexRoute, Link, IndexLink, browserHistory, hashHistory } from "react-router"

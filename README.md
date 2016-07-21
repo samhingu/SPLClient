@@ -27,6 +27,12 @@ Day - 3
 - sudo typings install dt~redux-logger --ambient --save --global
 DAY - 4
 - npm install --save-dev copy-webpack-plugin
+Day - 5
+- npm i -D bower-webpack-plugin
+- npm i -D file-loader style-loader css-loader
+- npm i -D url-loader
+Day 6
+- npm install less-loader less --save-dev
 
 GLOBAL DEPENDENCIES
 - typescript : 1.8.10
@@ -39,6 +45,7 @@ REFERENCES :
 - https://github.com/ServiceStackApps/typescript-redux
 - https://github.com/ocampesato/react-intermediate3
 - https://github.com/keokilee/react-typescript-boilerplate
+- https://github.com/lpiepiora/bower-webpack-plugin
 
 Icon :
 http://realfavicongenerator.net/

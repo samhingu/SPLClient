@@ -4,6 +4,7 @@ import { bindActionCreators } from "redux";
 
 import * as LinkActions from "../actions/Link";
 import { Link, IState2 } from "../models/Link";
+import LinkComponent from "../components/Link"
 
 interface Props extends React.Props<Links> {
     links: IState2,
@@ -37,7 +38,7 @@ export default class Links extends React.Component<Props, {}>{
                 <div></div>
                 <div>HAVING LINKS TOTAL : {this.props.links.links.length}</div>
                 { this.props.links.links.map((link) =>
-                    <li key={link._id}>{link.title}</li>
+                    <LinkComponent link={link} key={link._id}></LinkComponent>
                 ) }
                 <button onClick={e => this.props.createLink({ _id: '0', title: 'New Link', body: 'body one', createdOn: 'on created this time' }) } >Add</button>
             </div>
