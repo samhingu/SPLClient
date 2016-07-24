@@ -1,21 +1,20 @@
 //
-// import { handleActions, Action } from 'redux-actions';
+// import { handleActions, Action } from 'redux-actions'
 //
-// import * as _ from "lodash";
+// import * as _ from "lodash"
 //
-import { GET_LINKS_REQUEST, GET_LINKS_ERROR, GET_LINKS_SUCCESS, ADD_LINK, DELETE_LINK} from "../constants/ActionTypes";
+import { GET_LINKS_REQUEST, GET_LINKS_ERROR, GET_LINKS_SUCCESS, ADD_LINK, DELETE_LINK} from "../constants/ActionTypes"
 //
-import {Link, IState, IState2} from "../models/Link";
+import {ILink, IState, IState2} from "../models/Link"
 //
 const initialState: IState2 = {
-    links: [<Link>{
+    links: [<ILink>{
         _id: 'id',
-        title: 'title1',
+        title: 'Temporary Link',
         body: 'body 1',
         createdOn: 'created jon date'
     }],
     isLoading: false,
-
     errorMessage: ''
 }
 //
@@ -28,13 +27,29 @@ const initialState: IState2 = {
 export default (state: IState2 = initialState, action) => {
     switch (action.type) {
         case ADD_LINK:
-            return { isLoading: state.isLoading, errorMessage: state.errorMessage, links: [...state.links, action.payload] }
+            return {
+                isLoading: state.isLoading,
+                errorMessage: state.errorMessage,
+                links: [...state.links, action.payload]
+            }
         case GET_LINKS_REQUEST:
-            return { isLoading: true, errorMessage: '', links: state.links }
+            return {
+                isLoading: true,
+                errorMessage: '',
+                links: state.links
+            }
         case GET_LINKS_ERROR:
-            return { isLoading: false, errorMessage: <string>action.payload, links: state.links };
+            return {
+                isLoading: false,
+                errorMessage: <string>action.payload,
+                links: state.links
+            };
         case GET_LINKS_SUCCESS:
-            return { isLoading: false, errorMessage: '', links: action.payload };
+            return {
+                isLoading: false,
+                errorMessage: '',
+                links: action.payload
+            };
         default:
             return state;
 

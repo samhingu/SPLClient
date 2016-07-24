@@ -1,11 +1,11 @@
-export type Link = {
+export type ILink = {
     _id: string,
     title: string,
     body: string,
     createdOn: string
 }
 
-export type IState = Link[]
+export type IState = ILink[]
 
 export type IState2 = {
     links: IState,

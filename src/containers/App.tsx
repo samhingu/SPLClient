@@ -3,14 +3,11 @@ import { Link } from "react-router"
 import { Provider } from "react-redux"
 
 import configureStore from "../store/index"
-import Footer from "./Footer"
-interface Props extends React.Props<App> {
+import Footer from "../components/_Footer"
 
-}
+const store = configureStore()
 
-const store = configureStore();
-
-export default class App extends React.Component<Props, {}> {
+export default class App extends React.Component<{}, {}> {
     public render() {
         return (
             <Provider store={store}>
@@ -26,11 +23,9 @@ export default class App extends React.Component<Props, {}> {
                                 <span style={{ margin: 5 }}>SPL Client</span>
                             </Link>
                             <Link to="/Hello" className="item active">Hello</Link>
-                            <Link to="/About" className="item">About</Link>
                             <Link to="/Link" className="item">Link</Link>
                         </div>
                     </div>
-
                     <div className="ui main container">
                         {this.props.children}
                     </div>
