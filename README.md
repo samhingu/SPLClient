@@ -5,7 +5,7 @@ REQUESISTS
 - ATOM EDITOR
 - atom-typescript (Atom plugin)
 
-STEPS
+#STEPS
 - npm init
 - npm i
 - npm i -g typescipt typings webpack webpack-dev-server
@@ -14,25 +14,28 @@ STEPS
 - npm link typescript ???
 - typings install --ambient --save --global  dt~react
 - typings install --ambient --save --global  dt~react-dom
-Day-2
+#Day-2
 - npm i -D cross-env
 - npm i -D clean-webpack-plugin extract-text-webpack-plugin html-webpack-plugin
 - npm i -g http-server
-Day - 3
+#Day - 3
 - sudo typings install react-redux --ambient --save
 - sudo typings install react-router-redux --ambient --save
 - sudo typings install react-router --ambient --save
 - sudo typings install redux-thunk --ambient --save
 - sudo typings install --ambient --save dt~redux-actions --global
 - sudo typings install dt~redux-logger --ambient --save --global
-DAY - 4
+#DAY - 4
 - npm install --save-dev copy-webpack-plugin
-Day - 5
+#Day - 5
 - npm i -D bower-webpack-plugin
 - npm i -D file-loader style-loader css-loader
 - npm i -D url-loader
-Day 6
+#Day 6
 - npm install less-loader less --save-dev
+#Day 7
+- npm i -S redux-toastr
+- npm install -g dts-generator
 
 GLOBAL DEPENDENCIES
 - typescript : 1.8.10

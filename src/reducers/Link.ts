@@ -3,17 +3,12 @@
 //
 // import * as _ from "lodash"
 //
-import { GET_LINKS_REQUEST, GET_LINKS_ERROR, GET_LINKS_SUCCESS, ADD_LINK, DELETE_LINK} from "../constants/ActionTypes"
+import { GET_LINKS_REQUEST, GET_LINKS_ERROR, GET_LINKS_SUCCESS, ADD_LINK, DELETE_LINK } from "../constants/ActionTypes"
 //
-import {ILink, IState, IState2} from "../models/Link"
+import { ILink, IState, IState2 } from "../models/Link"
 //
 const initialState: IState2 = {
-    links: [<ILink>{
-        _id: 'id',
-        title: 'Temporary Link',
-        body: 'body 1',
-        createdOn: 'created jon date'
-    }],
+    links: [],
     isLoading: false,
     errorMessage: ''
 }

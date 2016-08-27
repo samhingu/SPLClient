@@ -5,7 +5,8 @@
     "react-router": "registry:npm/react-router#2.0.0+20160214194820",
     "react-router-redux": "registry:npm/react-router-redux#3.0.0+20160214195458",
     "redux": "registry:npm/redux#3.0.6+20160214194820",
-    "redux-thunk": "registry:npm/redux-thunk#2.0.0+20160525185520"
+    "redux-thunk": "registry:npm/redux-thunk#2.0.0+20160525185520",
+    "redux-toastr": "registry:npm/redux-toastr#1.1.2+20160525185520"
   },
   "globalDependencies": {
     "redux-actions": "registry:dt/redux-actions#0.8.0+20160521154116",

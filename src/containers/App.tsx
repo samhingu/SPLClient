@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "react-router"
 import { Provider } from "react-redux"
+import ReduxToastr from 'redux-toastr'
 
 import configureStore from "../store/index"
 import Footer from "../components/_Footer"
@@ -30,6 +31,7 @@ export default class App extends React.Component<{}, {}> {
                         {this.props.children}
                     </div>
                     <Footer />
+                    <ReduxToastr />
                 </div>
             </Provider >
         )
